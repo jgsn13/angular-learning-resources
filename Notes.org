@@ -22,5 +22,33 @@ yarn add bootstrap
     "src/styles.css"
 ]
   #+end_src
+** Components
+- Components are created by using the **Component** decorator from **'@angular/core'**, the you must register the component in the module of the nearest component module:
+~user.component.ts~
+  #+begin_src typescript
+import { Component } from '@angular/core';
 
-  
+@Component({
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+})
+export class UserComponent {}
+  #+end_src
+~app.module.ts~
+#+begin_src typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { UserComponent } from './user/user.component';
+
+@NgModule({
+  declarations: [AppComponent, UserComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+#+end_src
+- You can also set the **selector**, **template** or **templateUrl** and **styles** or **styleUrl** as properties in the **Component** decorator.
+- The selector defines the way you use the component. Since the selector is just 'app-user', you will use the component as a common html tag.  
