@@ -1,0 +1,26 @@
+#+TITLE: Angular Learning Resources
+#+AUTHOR: Joaquim Gregório da Silva Neto
+
+* Basics
+** Create a new project
+#+begin_src sh
+npm install --location=global @angular/cli
+#+end_src
+- Now you can create a new project
+  #+begin_src sh
+ng new <project-name>
+  #+end_src
+- You can add css libraries to angular by installing it and importing the css file in the ~styles~ section in *angular.json* file.
+- First add the library (bootstrap in this example):
+  #+begin_src sh
+yarn add bootstrap
+  #+end_src
+- Now, in the *angular.json* file:
+  #+begin_src json
+"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+]
+  #+end_src
+
+  
