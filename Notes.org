@@ -23,7 +23,7 @@ yarn add bootstrap
 ]
   #+end_src
 ** Components
-- Components are created by using the **Component** decorator from **'@angular/core'**, the you must register the component in the module of the nearest component module:
+- Components are created by using the *Component* decorator from *'@angular/core'*, the you must register the component in the module of the nearest component module:
 ~user.component.ts~
   #+begin_src typescript
 import { Component } from '@angular/core';
@@ -50,12 +50,12 @@ import { UserComponent } from './user/user.component';
 })
 export class AppModule {}
 #+end_src
-- You can also set the **selector**, **template** or **templateUrl** and **styles** or **styleUrl** as properties in the **Component** decorator.
-- **selector** is the type of the selector that you will need to use the component, the default is just a HTML tag. But it can be an attribute selector ~'[app-user]'~ or a class selector ~'.app-user'~.
-- **templateUrl** is the path that points to the HTML file which contains the HTML content of the component.
-- **template** option is a string where you write the HTML content of the component.
-- **styleUrls** is an array which contains the paths that points to the differents style files of the component.
-- **styles** options is an array of strings that contains the style code of the component.
+- You can also set the *selector*, *template* or *templateUrl* and *styles* or *styleUrl* as properties in the *Component* decorator.
+- *selector* is the type of the selector that you will need to use the component, the default is just a HTML tag. But it can be an attribute selector ~'[app-user]'~ or a class selector ~'.app-user'~.
+- *templateUrl* is the path that points to the HTML file which contains the HTML content of the component.
+- *template* option is a string where you write the HTML content of the component.
+- *styleUrls* is an array which contains the paths that points to the differents style files of the component.
+- *styles* options is an array of strings that contains the style code of the component.
 ** Using CLI to create a new compoent
   #+begin_src sh
 ng generate component <component-name>
